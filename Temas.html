@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Temas principales de HTML</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .boton-regresar {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: #0288d1;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      animation: bounce 2s infinite;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .boton-regresar:hover {
+      background-color: #01579b;
+      transform: scale(1.1);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .boton-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .decoracion-izquierda,
+    .decoracion-derecha {
+      width: 200px; /* Ajusta el tamaño según necesites */
+      animation: fadeInOut 4s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📘 Temas principales de HTML</h1>
+  </header>
+
+  <main class="temas-principales">
+    <section class="tema">
+      <h2>Estructura básica</h2>
+      <p>Incluye la declaración <code>&lt;!DOCTYPE html&gt;</code>, la etiqueta <code>&lt;html&gt;</code>, el <code>&lt;head&gt;</code> con los metadatos y el <code>&lt;body&gt;</code> con el contenido visible de la página.</p>
+    </section>
+
+    <section class="tema">
+      <h2>Etiquetas de texto</h2>
+      <p>Permiten dar formato al contenido textual. Ejemplos: <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> para títulos, <code>&lt;p&gt;</code> para párrafos, <code>&lt;strong&gt;</code> para negrita y <code>&lt;em&gt;</code> para énfasis.</p>
+    </section>
+
+    <section class="tema">
+      <h2>Imágenes y enlaces</h2>
+      <p>Las imágenes se insertan con <code>&lt;img src="" alt=""&gt;</code> y los enlaces con <code>&lt;a href=""&gt;</code>. Son fundamentales para crear navegación y enriquecer visualmente la web.</p>
+    </section>
+
+    <div class="contenedor-formulario">
+      <img src="img/html2.jpg" alt="Decoración izquierda" class="decoracion-izquierda">
+      
+      <section class="tema">
+        <h2>Formularios</h2>
+        <p>Permiten la entrada de datos del usuario. Incluyen elementos como <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, y botones <code>&lt;button&gt;</code>.</p>
+      </section>
+      
+      <img src="img/html3.jpg" alt="Decoración derecha" class="decoracion-derecha">
+    </div>
+
+    <div class="boton-container">
+      <a href="index.html" class="boton-regresar">← Volver al inicio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>📬 Contacto: Lenin.flo2004@gmail.com | 📞 +593 987 970 428</p>
+    <p>© 2025 Introducción al HTML. Todos los derechos reservados.</p>
+    <div class="redes-sociales">
+      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+</body>
+</html>

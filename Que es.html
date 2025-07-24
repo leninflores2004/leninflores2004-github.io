@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Qué es HTML?</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 30px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .slider img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .slider img.active {
+      opacity: 1;
+    }
+
+   
+    .contenido {
+      text-align: center;
+      padding: 30px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .contenido h1 {
+      font-size: 2.5em;
+      color: #af8000;
+      animation: slideInDown 1s ease-out;
+    }
+
+    .contenido h2 {
+      color: #1e9700;
+      margin-top: 30px;
+      animation: slideInLeft 1s ease;
+    }
+
+    .contenido p,
+    .contenido ul {
+      font-size: 1.1em;
+      line-height: 1.7;
+      margin-top: 15px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "✔️ ";
+      color: green;
+      margin-right: 5px;
+    }
+
+
+    .boton-regresar {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: #c3d102;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      animation: bounce 2s infinite;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .boton-regresar:hover {
+      background-color: #7f9b01;
+      transform: scale(1.1);
+    }
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="contenido">¿Qué es HTML?</h1>
+  </header>
+
+  <main class="contenido">
+    <h2>Lenguaje de Marcado de Hipertexto</h2>
+    <p><strong>HTML (HyperText Markup Language)</strong> es el lenguaje que utilizamos para crear y estructurar contenido en la web. Es el esqueleto de las páginas web, donde cada parte (texto, imagen, formulario, enlace) tiene una etiqueta que le da significado.</p>
+
+    <p>Desde su creación en los años 90, HTML ha sido esencial para el desarrollo web.</p>
+    <p>Hoy usamos <strong>HTML5</strong>, una versión moderna que permite integrar videos, audio, formularios inteligentes y más.</p>
+
+    <h2>¿Para qué sirve HTML?</h2>
+    <p><strong>HTML es la base de toda página web. Sirve para:</strong></p>
+    <ul>
+      <li>Definir la estructura del contenido</li>
+      <li>Mostrar imágenes, videos y textos</li>
+      <li>Crear enlaces entre páginas</li>
+      <li>Formularios para capturar datos</li>
+      <li>Construir interfaces web junto con CSS y JavaScript</li>
+    </ul>
+
+    <div class="slider">
+      <img src="img/html3.jpg" alt="Estructura de HTML" class="active">
+      <img src="img/quees1.jpg" alt="HTML5 logo">
+      <img src="img/quees2.jpg" alt="Etiquetas comunes HTML">
+    </div>
+
+    <a href="index.html" class="boton-regresar">← Volver al inicio</a>
+  </main>
+
+  <script>
+    const images = document.querySelectorAll(".slider img");
+    let current = 0;
+
+    function showNextImage() {
+      images[current].classList.remove("active");
+      current = (current + 1) % images.length;
+      images[current].classList.add("active");
+    }
+
+    setInterval(showNextImage, 3000); 
+  </script>
+   <footer>
+    <p>📬 Contacto: Lenin.flo2004@gmail.com | 📞 +593 987 970 428</p>
+    <p>© 2025 Introducción al HTML. Todos los derechos reservados.</p>
+    <div class="redes-sociales">
+      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+</body>
+</html>

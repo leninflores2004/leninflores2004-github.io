@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta del Curso de HTML</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #e0f2f1, #b2ebf2);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #00695c;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #004d40;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #b2dfdb;
+      border-radius: 10px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #00796b;
+      outline: none;
+    }
+
+    button {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 10px;
+      margin-top: 25px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    #respuestas {
+      margin-top: 20px;
+      background-color: #e0f7fa;
+      border: 2px dashed #006064;
+      border-radius: 10px;
+      padding: 20px;
+      white-space: pre-wrap;
+      font-size: 1em;
+      color: #004d40;
+    }
+
+    .error {
+      color: #d32f2f;
+    }
+
+    .exito {
+      color: #388e3c;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #555;
+    }
+
+    footer a {
+      color: #00796b;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Encuesta del Curso de HTML</h2>
+    <form id="formulario">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="curso">¿Te gustó el curso de HTML?</label>
+      <select id="curso" required>
+        <option value="">Selecciona una opción</option>
+        <option>Sí, me encantó</option>
+        <option>Estuvo bien</option>
+        <option>No mucho</option>
+      </select>
+
+      <label for="aprendiste">¿Qué aprendiste en este curso?</label>
+      <textarea id="aprendiste" rows="3" required></textarea>
+
+      <label for="dificultad">¿Qué tan difícil fue programar en HTML?</label>
+      <select id="dificultad" required>
+        <option value="">Selecciona una opción</option>
+        <option>Muy fácil</option>
+        <option>Fácil</option>
+        <option>Regular</option>
+        <option>Difícil</option>
+      </select>
+
+      <label for="pagina">¿Qué te pareció esta página web?</label>
+      <textarea id="pagina" rows="3" required></textarea>
+
+      <label for="recomendacion">¿Recomendarías este curso a otros?</label>
+      <select id="recomendacion" required>
+        <option value="">Selecciona una opción</option>
+        <option>Sí, totalmente</option>
+        <option>Tal vez</option>
+        <option>No</option>
+      </select>
+
+      <label for="sugerencias">¿Tienes alguna sugerencia o comentario adicional?</label>
+      <textarea id="sugerencias" rows="3"></textarea>
+
+      <button type="submit">Enviar Encuesta</button>
+    </form>
+
+    <div id="resultado"></div>
+    <div id="respuestas"></div>
+    <a href="index.html" class="boton-regresar">← Volver al inicio</a>
+  </div>
+
+  <footer>
+    <p>© 2025. Diseño por <a href="index.html">Lenin Flores</a>.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
